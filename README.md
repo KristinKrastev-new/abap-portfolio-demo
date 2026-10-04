@@ -1,5 +1,7 @@
 # SAP ABAP Portfolio - S/4HANA Finance Demo
 
+**Author:** Kristin Krastev · GitHub: [KristinKrastev-new](https://github.com/KristinKrastev-new)
+
 A small, self-contained ABAP portfolio project built on **S/4HANA 2022
 (ABAP 7.57)** with a focus on **Finance (FI)** and the **Universal Journal
 (table `ACDOCA`)**.
