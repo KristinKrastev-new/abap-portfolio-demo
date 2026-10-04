@@ -20,6 +20,9 @@ S/4HANA data access (Universal Journal / CDS views) instead of classic
 | `zcl_fi_journal_reader.clas.testclasses` | ABAP Unit, test-driven mindset |
 | `ZCS_FI_JOURNAL_ITEMS` | CDS interface view (VDM `#BASIC`) on the Universal Journal |
 | `ZCS_FI_JOURNAL_ITEMS_UI` | CDS consumption view + UI annotations (Fiori / analytics) |
+| `ZR_FI_JOURNALITEM` + `ZC_FI_JOURNALITEM` | Read-only **RAP** business object (root & projection view entities + behavior definitions) |
+| `ZSD_FI_JOURNALITEM` | RAP service definition (publish as an OData V4 binding) |
+| [docs/rap-business-object.md](docs/rap-business-object.md) | Read-only RAP BO explained |
 | [docs/debugging-writeup.md](docs/debugging-writeup.md) | How I analyse and refactor legacy ABAP |
 | [docs/odata-service.md](docs/odata-service.md) | Exposing a CDS view as an OData service |
 
@@ -50,10 +53,17 @@ abap-portfolio-demo/
 │   ├── zcx_fi_journal_error.clas.abap
 │   ├── zfi_journal_report.prog.abap
 │   ├── zcs_fi_journal_items.ddls.asddls
-│   └── zcs_fi_journal_items_ui.ddls.asddls
+│   ├── zcs_fi_journal_items_ui.ddls.asddls
+│   ├── zr_fi_journalitem.ddls.asddls          # RAP root view entity
+│   ├── zr_fi_journalitem.bdef.asbdef          # RAP root behavior definition
+│   ├── zc_fi_journalitem.ddls.asddls          # RAP projection view entity
+│   ├── zc_fi_journalitem.bdef.asbdef          # RAP projection behavior definition
+│   ├── zc_fi_journalitem.ddlx.asddlx          # UI metadata extension
+│   └── zsd_fi_journalitem.srvd.srvdsrv        # RAP service definition
 └── docs/
     ├── debugging-writeup.md
-    └── odata-service.md
+    ├── odata-service.md
+    └── rap-business-object.md
 ```
 
 ## How to run it

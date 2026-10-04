@@ -1,0 +1,28 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZC_FI_JournalItem with
+{
+  @UI.lineItem: [ { position: 10, importance: #HIGH } ]
+  CompanyCode;
+
+  @UI.lineItem: [ { position: 20 } ]
+  FiscalYear;
+
+  @UI.lineItem: [ { position: 30, importance: #HIGH } ]
+  AccountingDocument;
+
+  @UI.lineItem: [ { position: 40 } ]
+  LineItem;
+
+  @UI.lineItem: [ { position: 50 } ]
+  PostingDate;
+
+  @UI.lineItem: [ { position: 60 } ]
+  GLAccount;
+
+  @UI.lineItem: [ { position: 70, importance: #HIGH } ]
+  @Semantics.amount.currencyCode: 'CompanyCodeCurrency'
+  AmountInCompanyCodeCurrency;
+
+  @UI.identification: [ { position: 10 } ]
+  CompanyCodeCurrency;
+}

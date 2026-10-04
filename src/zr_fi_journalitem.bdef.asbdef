@@ -1,0 +1,7 @@
+managed;
+strict ( 2 );
+
+define behavior for ZR_FI_JournalItem alias JournalItem
+{
+  read;
+}

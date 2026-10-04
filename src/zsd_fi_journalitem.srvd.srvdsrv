@@ -1,0 +1,4 @@
+@EndUserText.label: 'Journal Item'
+define service ZSD_FI_JOURNALITEM {
+  expose ZC_FI_JournalItem as JournalItem;
+}
